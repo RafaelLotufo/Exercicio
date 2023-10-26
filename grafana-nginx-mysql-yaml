@@ -1,0 +1,60 @@
+Criar pastas
+
+# cd /srv
+
+# mkdir mysql nginx grafana 
+
+
+
+Criar docker-compose.yaml
+
+# vi /srv/docker-compose.yaml
+
+
+version: '3.8'
+services:
+  grafana:
+    image: grafana/grafana-enterprise
+    container_name: grafana
+    restart: unless-stopped
+    user: '0'
+    ports:
+      - '3000:3000'
+    volumes:
+      - '/srv/grafana:/var/lib/grafana'
+  mysql:
+    image: mysql:5.7
+    restart: always
+    environment:
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      - '3306:3306'
+    expose:
+      - '3306'
+    volumes:
+      - /srv/mysql:/var/lib/mysql
+    
+  nginx:
+    image: nginx:latest
+    ports:
+       - "8080:80"
+    volumes:
+       - /srv/nginx:/usr/share/nginx/html
+    links:
+       - php
+
+
+
+Subir ambiente
+
+# docker compose up -d
+
+
+Conectar ao conteiner mysql
+
+# docker exec -it db mysql -uuser -p
+
+
+Colocar páginas html 
