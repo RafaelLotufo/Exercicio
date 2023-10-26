@@ -117,7 +117,8 @@ bash
 Nota Importante: Certifique-se de monitorar logs e mensagens de erro durante a inicialização do ambiente para solucionar quaisquer problemas que possam surgir.
 
  
-# DNS acesso http://ec2-3-146-65-53.us-east-2.compute.amazonaws.com/zabbix/   Admin - Zabbix
-# DNS grafana  http://3.135.225.142:3000/d/b34e2f55-98c0-49d3-ba87-b0cf5536493e/new-dashboard?orgId=1      login admin senha admin123
+### DNS acesso http://ec2-3-146-65-53.us-east-2.compute.amazonaws.com/zabbix/   Admin - Zabbix
+### DNS grafana  http://3.135.225.142:3000/d/b34e2f55-98c0-49d3-ba87-b0cf5536493e/new-dashboard?orgId=1      login admin senha admin123
+### http://3.135.225.142:8080/
 
-IP servidor  Zabbix 3.135.225.142  acesse liberado pelo systems Managem sem precisar de .pem
+### IP servidor  Zabbix 3.135.225.142  acesse liberado pelo systems Managem sem precisar de .pem
